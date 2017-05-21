@@ -1,0 +1,6 @@
+openbsd:
+  :roles:
+    - openbsd
+  :name: OpenBSD 6.1
+  :version: 20170520
+  :doc_url: https://docs.joyent.com/images/kvm/openbsd
