@@ -237,18 +237,18 @@ get_image_details $IMAGE
 choose_package
 get_networks
 
-INSTACE_NAME=${IMAGENAME}-${VERSION}-${DATE}
+INSTANCE_NAME=${IMAGENAME}-${VERSION}-${DATE}
 
-create_instance $IMAGE $INSTACE_NAME
-wait_for_IP $INSTACE_NAME
-wait_for_ssh $INSTACE_NAME
+create_instance $IMAGE $INSTANCE_NAME
+wait_for_IP $INSTANCE_NAME
+wait_for_ssh $INSTANCE_NAME
 
-echo "Sleeping for 30 seconds"
-sleep 30
+echo "Sleeping for 60 seconds"
+sleep 60
 
-test_image $INSTACE_NAME
+test_image $INSTANCE_NAME
 
-#create_custom_image $INSTACE_NAME
+#create_custom_image $INSTANCE_NAME
 #
 #get_image_details $IMAGENAME-CUST
 #choose_package
@@ -263,8 +263,8 @@ test_image $INSTACE_NAME
 #test_image $CUSTOM_INSTANCE_NAME
 
 echo "Deleting instance and custom image"
-ssh-keygen -q -R $(triton inst ip $INSTACE_NAME)
-delete_instance $INSTACE_NAME
+ssh-keygen -q -R $(triton inst ip $INSTANCE_NAME)
+delete_instance $INSTANCE_NAME
 #ssh-keygen -q -R $(triton inst ip $CUSTOM_INSTANCE_NAME)
 #delete_instance $CUSTOM_INSTANCE_NAME
 #delete_image $IMAGENAME
