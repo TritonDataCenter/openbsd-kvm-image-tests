@@ -100,7 +100,7 @@ get_image_details() {
 }
 
 choose_package() {
-    PACKAGE=k4-highcpu-kvm-3.75G
+    PACKAGE=k4-highcpu-kvm-1.75G
     echo "Using package:"
     echo "    $PACKAGE"
     echo ""
