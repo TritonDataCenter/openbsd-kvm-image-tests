@@ -243,9 +243,6 @@ create_instance $IMAGE $INSTANCE_NAME
 wait_for_IP $INSTANCE_NAME
 wait_for_ssh $INSTANCE_NAME
 
-echo "Sleeping for 60 seconds"
-sleep 60
-
 test_image $INSTANCE_NAME
 
 #create_custom_image $INSTANCE_NAME
